@@ -1,4 +1,4 @@
-import { pnpPlugin } from "@yarnpkg/esbuild-plugin-pnp";
+// import { pnpPlugin } from "@yarnpkg/esbuild-plugin-pnp";
 import { Environment, AssetsConfig, Config } from "./types";
 import type { ESBuildServeOptions, ESBuildBuildOptions } from "esbuild";
 
@@ -9,13 +9,15 @@ export const getConfig = (env: Environment): Config => {
   const root = process.cwd();
 
   const esbuild: ESBuildBuildOptions = {
-    plugins: [pnpPlugin()],
+    plugins: [
+      /* pnpPlugin() */
+    ],
     entryPoints: ["src/main.ts"],
     bundle: true,
     minify: env.production,
-    outdir: "dist",
-    // outfile: "dist/assets/scripts/main.js"
-    loader: { '.png': 'file', '.html': 'file' },
+    outdir: env.outdir,
+    outfile: env.outfile,
+    loader: { ".png": "file", ".html": "file" },
     platform: "browser",
     sourcemap: env.development,
     watch: env.watch || false,
@@ -24,8 +26,17 @@ export const getConfig = (env: Environment): Config => {
     },
   };
 
+  if (!esbuild.outdir) {
+    delete esbuild.outdir;
+  }
+  if (!esbuild.outfile) {
+    delete esbuild.outfile;
+  }
+
+  console.debug("exbuild config", esbuild);
+
   const serve: ESBuildServeOptions = {
-    servedir: "dist",
+    servedir: "./dist",
     port: env.port,
   };
 

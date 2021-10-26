@@ -1,7 +1,7 @@
 {
   "name": "@pixelrpg/esbuild",
   "main": "dist/index.js",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "scripts": {
     "clear": "rimraf dist",
     "build": "tsc",
@@ -12,11 +12,10 @@
   },
   "dependencies": {
     "@tsconfig/node16": "^1.0.2",
-    "@types/node": "^16.11.3",
+    "@types/node": "^16.11.6",
     "@types/pnpapi": "^0.0.2",
     "@types/yargs": "^17.0.4",
-    "@yarnpkg/esbuild-plugin-pnp": "^2.0.0-rc.5",
-    "esbuild": "^0.13.8",
+    "esbuild": "^0.13.9",
     "fast-glob": "^3.2.7",
     "jimp": "^0.16.1",
     "tile-extruder": "^2.1.0",

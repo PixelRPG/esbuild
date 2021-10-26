@@ -30,11 +30,25 @@ const start = async () => {
       type: "boolean",
       description: "Watch files",
       default: false,
+    })
+    .option("outdir", {
+      alias: "dir",
+      type: "string",
+      description: "Watch files",
+      default: undefined,
+    })
+    .option("outfile", {
+      alias: "o",
+      type: "string",
+      description: "Watch files",
+      default: undefined,
     }).argv;
 
   const env: Environment = {
     development: argv.dev,
     production: !argv.dev,
+    outdir: argv.outdir,
+    outfile: argv.outfile,
     watch: argv.watch,
     serve: argv.serve,
     port: argv.port,

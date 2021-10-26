@@ -7,7 +7,9 @@ export const run = async (env: Environment, config: Config) => {
     return esbuild.serve(config.serve, config.esbuild);
   } else {
     const result = await esbuild.build(config.esbuild);
-    console.info(`Build done: ${config.esbuild.outdir}`);
+    console.info(
+      `Build done: ${config.esbuild.outdir || config.esbuild.outfile}`
+    );
     return result;
   }
 };

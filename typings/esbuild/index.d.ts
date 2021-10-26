@@ -5,8 +5,9 @@ declare module "esbuild" {
     bundle?: boolean;
     minify?: boolean;
     outdir?: string;
+    outfile?: string;
     platform?: "browser" | "node" | "neutral";
-    loader?: { [ext: string]: string }
+    loader?: { [ext: string]: string };
     sourcemap?: boolean;
     watch?: boolean;
     define?: {
