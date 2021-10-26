@@ -1,4 +1,5 @@
 // import { pnpPlugin } from "@yarnpkg/esbuild-plugin-pnp";
+import { glsl } from "esbuild-plugin-glsl";
 import { Environment, AssetsConfig, Config } from "./types";
 import type { ESBuildServeOptions, ESBuildBuildOptions } from "esbuild";
 
@@ -11,6 +12,9 @@ export const getConfig = (env: Environment): Config => {
   const esbuild: ESBuildBuildOptions = {
     plugins: [
       /* pnpPlugin() */
+      glsl({
+        minify: true
+      })
     ],
     entryPoints: ["src/main.ts"],
     bundle: true,
@@ -32,8 +36,6 @@ export const getConfig = (env: Environment): Config => {
   if (!esbuild.outfile) {
     delete esbuild.outfile;
   }
-
-  console.debug("exbuild config", esbuild);
 
   const serve: ESBuildServeOptions = {
     servedir: "./dist",
