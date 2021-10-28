@@ -27,6 +27,8 @@ export const getConfig = (env: Environment): Config => {
     watch: env.watch || false,
     define: {
       global: "window",
+      // Needed to build excalibur
+      "process.env.__EX_VERSION": "'0.0.1-custom'" // TODO
     },
   };
 
