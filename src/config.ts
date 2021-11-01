@@ -21,7 +21,7 @@ export const getConfig = (env: Environment): Config => {
     minify: env.production,
     outdir: env.outdir,
     outfile: env.outfile,
-    loader: { ".png": "file", ".tmx": "file", ".html": "file" },
+    loader: { ".png": "file", ".tmx": "file", ".html": "file", ".json": "file" },
     platform: "browser",
     sourcemap: env.development,
     watch: env.watch || false,
