@@ -1,7 +1,9 @@
 // import { pnpPlugin } from "@yarnpkg/esbuild-plugin-pnp";
-import { glsl } from "esbuild-plugin-glsl";
+import {  glsl } from "esbuild-plugin-glsl";
 import { Environment, AssetsConfig, Config } from "./types";
-import type { ESBuildServeOptions, ESBuildBuildOptions } from "esbuild";
+import process from 'node:process';
+
+import type { ServeOptions, BuildOptions } from "esbuild";
 
 export const getConfig = (env: Environment): Config => {
   env.development = env.development || !env.production;
@@ -9,7 +11,7 @@ export const getConfig = (env: Environment): Config => {
 
   const root = process.cwd();
 
-  const esbuild: ESBuildBuildOptions = {
+  const esbuild: BuildOptions = {
     plugins: [
       /* pnpPlugin() */
       glsl({
@@ -24,7 +26,6 @@ export const getConfig = (env: Environment): Config => {
     loader: { ".png": "file", ".tmx": "file", ".html": "file", ".json": "file" },
     platform: "browser",
     sourcemap: env.development,
-    watch: env.watch || false,
     define: {
       global: "window",
       // Needed to build excalibur
@@ -39,7 +40,7 @@ export const getConfig = (env: Environment): Config => {
     delete esbuild.outfile;
   }
 
-  const serve: ESBuildServeOptions = {
+  const serve: ServeOptions = {
     servedir: "./dist",
     port: env.port,
   };

@@ -1,9 +1,9 @@
 import { AssetsConfig } from "./assets-config";
-import type { ESBuildServeOptions, ESBuildBuildOptions } from "esbuild";
+import type { ServeOptions, BuildOptions } from "esbuild";
 
 export interface Config {
   root: string;
-  esbuild: ESBuildBuildOptions;
-  serve: ESBuildServeOptions;
+  esbuild: BuildOptions;
+  serve: ServeOptions;
   assets: AssetsConfig;
 }
