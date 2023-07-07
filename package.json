@@ -12,7 +12,7 @@
   },
   "dependencies": {
     "@tsconfig/node16": "^16.1.0",
-    "@types/node": "^20.3.3",
+    "@types/node": "^20.4.0",
     "@types/pnpapi": "^0.0.2",
     "@types/yargs": "^17.0.24",
     "esbuild": "^0.18.11",
@@ -23,6 +23,6 @@
     "yargs": "^17.7.2"
   },
   "devDependencies": {
-    "rimraf": "^3.0.2"
+    "rimraf": "^5.0.1"
   }
 }

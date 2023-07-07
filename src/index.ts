@@ -2,8 +2,7 @@ import yargs from "yargs/yargs";
 import { hideBin } from "yargs/helpers";
 import { getConfig } from "./config";
 import { Environment } from "./types";
-import * as esbuild from "./esbuild";
-// import * as extrude from "./extrude";
+import { run } from "./esbuild";
 
 const start = async () => {
   const argv = await yargs(hideBin(process.argv))
@@ -57,8 +56,7 @@ const start = async () => {
   const config = getConfig(env);
 
   try {
-    // await extrude.run(env, config);
-    await esbuild.run(env, config);
+    await run(env, config);
   } catch (error) {
     console.error(error);
     process.exit(1);
