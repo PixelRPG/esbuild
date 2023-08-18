@@ -12,10 +12,10 @@
   },
   "dependencies": {
     "@tsconfig/node16": "^16.1.0",
-    "@types/node": "^20.4.8",
+    "@types/node": "^20.5.0",
     "@types/pnpapi": "^0.0.2",
     "@types/yargs": "^17.0.24",
-    "esbuild": "^0.18.19",
+    "esbuild": "^0.19.2",
     "esbuild-plugin-glsl": "^1.2.1",
     "fast-glob": "^3.3.1",
     "jimp": "^0.22.10",
