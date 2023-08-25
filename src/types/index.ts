@@ -1,3 +1,3 @@
-export * from "./assets-config";
-export * from "./config";
-export * from "./environment";
+export * from "./assets-config.js";
+export * from "./config.js";
+export * from "./environment.js";

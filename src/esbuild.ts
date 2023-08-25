@@ -1,5 +1,5 @@
 import esbuild from "esbuild";
-import { Config, Environment } from "./types";
+import { Config, Environment } from "./types/index.js";
 
 export const run = async (env: Environment, config: Config) => {
   if (env.serve) {

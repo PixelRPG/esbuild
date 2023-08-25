@@ -2,6 +2,7 @@
   "name": "@pixelrpg/esbuild",
   "main": "dist/index.js",
   "version": "0.0.1",
+  "type": "module",
   "scripts": {
     "clear": "rimraf dist",
     "build": "tsc",
@@ -11,15 +12,15 @@
     "esbuilder": "./bin/run.js"
   },
   "dependencies": {
-    "@tsconfig/node16": "^16.1.0",
-    "@types/node": "^20.5.0",
+    "@tsconfig/node20": "^20.1.2",
+    "@types/node": "^20.5.6",
     "@types/pnpapi": "^0.0.2",
     "@types/yargs": "^17.0.24",
     "esbuild": "^0.19.2",
     "esbuild-plugin-glsl": "^1.2.1",
     "fast-glob": "^3.3.1",
     "jimp": "^0.22.10",
-    "typescript": "^5.1.6",
+    "typescript": "^5.2.2",
     "yargs": "^17.7.2"
   },
   "devDependencies": {

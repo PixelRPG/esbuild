@@ -1,6 +1,5 @@
-// import { pnpPlugin } from "@yarnpkg/esbuild-plugin-pnp";
-import {  glsl } from "esbuild-plugin-glsl";
-import { Environment, AssetsConfig, Config } from "./types";
+import { glsl } from "esbuild-plugin-glsl";
+import { Environment, AssetsConfig, Config } from "./types/index.js";
 import process from 'node:process';
 
 import type { ServeOptions, BuildOptions } from "esbuild";

@@ -1,2 +1,2 @@
 #!/usr/bin/env node
-require("@pixelrpg/esbuild/dist/index.js");
+import("@pixelrpg/esbuild/dist/index.js");

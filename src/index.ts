@@ -1,8 +1,8 @@
 import yargs from "yargs/yargs";
 import { hideBin } from "yargs/helpers";
-import { getConfig } from "./config";
-import { Environment } from "./types";
-import { run } from "./esbuild";
+import { getConfig } from "./config.js";
+import { Environment } from "./types/index.js";
+import { run } from "./esbuild.js";
 
 const start = async () => {
   const argv = await yargs(hideBin(process.argv))
