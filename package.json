@@ -13,14 +13,14 @@
   },
   "dependencies": {
     "@tsconfig/node20": "^20.1.2",
-    "@types/node": "^20.8.0",
-    "@types/pnpapi": "^0.0.2",
-    "@types/yargs": "^17.0.26",
-    "esbuild": "^0.19.4",
+    "@types/node": "^20.10.5",
+    "@types/pnpapi": "^0.0.5",
+    "@types/yargs": "^17.0.32",
+    "esbuild": "^0.19.10",
     "esbuild-plugin-glsl": "^1.2.2",
-    "fast-glob": "^3.3.1",
+    "fast-glob": "^3.3.2",
     "jimp": "^0.22.10",
-    "typescript": "^5.2.2",
+    "typescript": "^5.3.3",
     "yargs": "^17.7.2"
   },
   "devDependencies": {
