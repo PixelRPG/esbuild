@@ -12,15 +12,15 @@
     "esbuilder": "./bin/run.js"
   },
   "dependencies": {
-    "@tsconfig/node20": "^20.1.2",
-    "@types/node": "^20.10.5",
+    "@tsconfig/node20": "^20.1.4",
+    "@types/node": "^20.12.7",
     "@types/pnpapi": "^0.0.5",
     "@types/yargs": "^17.0.32",
-    "esbuild": "^0.19.10",
+    "esbuild": "^0.20.2",
     "esbuild-plugin-glsl": "^1.2.2",
     "fast-glob": "^3.3.2",
-    "jimp": "^0.22.10",
-    "typescript": "^5.3.3",
+    "jimp": "^0.22.12",
+    "typescript": "^5.4.5",
     "yargs": "^17.7.2"
   },
   "devDependencies": {
