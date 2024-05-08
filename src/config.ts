@@ -1,4 +1,5 @@
 import { glsl } from "esbuild-plugin-glsl";
+import { transformExtPlugin } from "@gjsify/esbuild-plugin-transform-ext";
 import { Environment, AssetsConfig, Config } from "./types/index.js";
 import process from 'node:process';
 
@@ -12,7 +13,7 @@ export const getConfig = (env: Environment): Config => {
 
   const esbuild: BuildOptions = {
     plugins: [
-      /* pnpPlugin() */
+      transformExtPlugin({ outExtension: { ".ts": ".js" } }),
       glsl({
         minify: true
       })
@@ -24,6 +25,8 @@ export const getConfig = (env: Environment): Config => {
     outfile: env.outfile,
     loader: { ".png": "file", ".tmx": "file", ".html": "file", ".json": "file" },
     platform: "browser",
+    target: "es2020",
+    format: "esm",
     sourcemap: env.development,
     define: {
       global: "window",

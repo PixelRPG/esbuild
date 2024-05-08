@@ -12,11 +12,12 @@
     "esbuilder": "./bin/run.js"
   },
   "dependencies": {
+    "@gjsify/esbuild-plugin-transform-ext": "^0.0.4",
     "@tsconfig/node20": "^20.1.4",
     "@types/node": "^20.12.7",
     "@types/pnpapi": "^0.0.5",
     "@types/yargs": "^17.0.32",
-    "esbuild": "^0.20.2",
+    "esbuild": "^0.21.1",
     "esbuild-plugin-glsl": "^1.2.2",
     "fast-glob": "^3.3.2",
     "jimp": "^0.22.12",
