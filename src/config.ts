@@ -25,14 +25,16 @@ export const getConfig = (env: Environment): Config => {
     outfile: env.outfile,
     loader: { ".png": "file", ".tmx": "file", ".html": "file", ".json": "file" },
     platform: "browser",
-    target: "es2020",
+    target: "esnext",
     format: "esm",
+    mainFields: ["module", "main"],
     sourcemap: env.development,
     define: {
       global: "window",
       // Needed to build excalibur
-      "process.env.__EX_VERSION": "'0.0.1-custom'" // TODO
+      // "process.env.__EX_VERSION": "'0.0.1-custom'" // TODO
     },
+    external: ["jsdom"]
   };
 
   if (!esbuild.outdir) {
