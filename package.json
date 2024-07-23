@@ -14,7 +14,7 @@
   "dependencies": {
     "@gjsify/esbuild-plugin-transform-ext": "^0.0.4",
     "@tsconfig/node20": "^20.1.4",
-    "@types/node": "^20.12.7",
+    "@types/node": "^20.14.11",
     "@types/pnpapi": "^0.0.5",
     "@types/yargs": "^17.0.32",
     "esbuild": "^0.23.0",
