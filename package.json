@@ -6,7 +6,8 @@
   "scripts": {
     "clear": "rimraf dist",
     "build": "tsc",
-    "watch": "tsc --watch"
+    "watch": "tsc --watch",
+    "check": "tsc --noEmit"
   },
   "bin": {
     "esbuilder": "./bin/run.js"
